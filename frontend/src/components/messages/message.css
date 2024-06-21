@@ -10,8 +10,10 @@
     display: flex;
     margin-bottom: 1rem;
     gap: 1rem;
-    position: fixed;
-    width: 74%;
+    height: 8vh;
+    top: 0;
+    position: sticky;
+    width: 100%;
     background-color: var(--blue-color);
     border: 1px solid var(--text-color);
 }
@@ -35,14 +37,14 @@
 .msg_bar{
     display:flex;
     flex-direction: column;
-    position:absolute;
+    position:relative;
     overflow-y: scroll;
-    /* position: fadeout; */
     margin-top: 4rem;
-    /* border: 1px solid var(--text-color); */
-    width: 74%;
-    padding-left: 1rem;  
-  padding-right: 1rem; 
+    height: 80vh;
+    width: 100%;
+margin:  0 auto ;
+padding-right: 1rem;
+padding-left: 1rem;
   flex: 1 1 auto;      
   overflow: auto; 
 }
@@ -50,11 +52,10 @@
 .msg_input{
     display: flex;
     margin: 0 auto;
-    /* gap: 1rem; */
     padding:  1rem;
     justify-content: center;
-    position:fixed;
-    width: 74%;
+    position: relative;
+    width: 100%;
     background-color: black;
     bottom: 0;
     align-items: center;

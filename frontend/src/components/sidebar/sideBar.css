@@ -20,14 +20,14 @@
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.923);
     align-items: center;
-    
-    /* position:absolute; */
+    top: 0;
+    position: sticky;
     gap: 2rem;
 }
 .form_container{
     display: flex;
     justify-content: center;
-    height: 8vh;
+    height: 10vh;
 
     margin: 0 auto;
     border-radius: 2rem;
@@ -38,8 +38,7 @@
     display: flex;
     margin-top: auto;
     justify-content: center;
-    height: 2rem;
-    /* position: absolute; */
+    height: 3rem;
     background-color: black;
     align-items: center;
     bottom: 0;
