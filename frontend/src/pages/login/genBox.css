@@ -1,0 +1,16 @@
+.genbox{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 1rem;
+}
+
+.box{
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+}
+.checkbox{
+    display: flex;
+
+    border: 1px solid var(--text-color);
+}

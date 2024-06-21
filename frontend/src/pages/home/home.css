@@ -1,0 +1,16 @@
+.home_container{
+    display: flex;
+}
+
+.sidebar{
+    display: flex;
+    flex:0.26;
+    overflow-y: auto;
+}
+
+.message{
+    display: flex;
+    flex: 0.74;
+    right: 0;
+    overflow-y: auto;
+}
