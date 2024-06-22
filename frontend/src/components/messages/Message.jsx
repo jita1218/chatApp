@@ -8,13 +8,11 @@ import 'daisyui/dist/full.css';
 const Message = ({ message }) => {
   const { authUser } = useAuthContext();
   const { SelectedConversation } = useConversation();
-  console.log('Current Auth User:', authUser);
-  console.log('Message Details:', message);
   const fromMe = message.senderId === authUser._id;
   const shakeClass = message.shouldShake ? "shake" : "";
   const formattedTime = extractTime(message.createdAt);
   const chatClassName = fromMe ? "chat-end" : "chat-start";
-  const profilePic = fromMe ? authUser.profilePic : (SelectedConversation?.profilePic );
+  const profilePic = fromMe ? authUser.profilePic : (SelectedConversation?.profilePic || '' );
   const bubbleBgColor = fromMe ? 'bg-blue-500' : 'bg-gray-300'; // Fallback color for other user's messages
 
   return (
