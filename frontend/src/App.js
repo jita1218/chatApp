@@ -6,14 +6,16 @@ import {Toaster} from 'react-hot-toast';
 import Login from "./pages/login/Login.jsx";
 import Signup from './pages/login/Signup.jsx';
 import { useAuthContext } from './context/AuthContext';
-import 'daisyui/dist/full.css';
+
+import Call from './components/call/Call.jsx'
 
 const App = () => {
   const {authUser} = useAuthContext();
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={authUser ? <Home/> : <Navigate to= '/login' />}/>
+      <Route path='/' element={authUser ?<Home/> : <Navigate to= '/login' />}/>
+      <Route path='/call/:roomId' element={<Call/>}/>
         <Route path='/login' element={authUser ? <Navigate to= '/' /> : <Login/>}/>
         <Route path='/signup' element={ authUser ? <Navigate to= '/' /> : <Signup/>}/>
       </Routes>

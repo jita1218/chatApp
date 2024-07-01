@@ -13,7 +13,7 @@ const generateTokenAndSetCookie = (userId , res) => {
             sameSite:"strict",
             secure: process.env.NODE_ENV !== 'production' ,
         });
-        
+
     } catch (error) {
             console.error('Error generating token or setting cookie:', error);
             res.status(500).send('Internal Server Error');
