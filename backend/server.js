@@ -16,13 +16,10 @@ const PORT = process.env.PORT || 8000;
 
 const __dirname = path.resolve();
 
-app.get('/', (req, res) => {
-    // root route http://localhost:8000/
-    // res.send('Hello World');
-});
 
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+
+app.use(cors({ origin: process.env.PORT, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
