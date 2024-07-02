@@ -16,15 +16,9 @@ const PORT = process.env.PORT || 8000;
 const __dirname = path.resolve();
 
 // Use FRONTEND_URL for CORS
-const FRONTEND_URL = process.env.FRONTEND_URL ;
 
-const corsOptions = {
-    origin: FRONTEND_URL,
-    credentials: true,
-    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
-};
+app.use(cors({ origin: process.env.PORT, credentials: true }));
 
-app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
