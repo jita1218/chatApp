@@ -9,8 +9,8 @@
     gap: 1rem;
     margin: 0 auto;
 }
+
 .checkbox{
     display: flex;
-
-    border: 1px solid var(--text-color);
+    border: 1px solid black;
 }

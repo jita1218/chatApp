@@ -88,7 +88,7 @@ const Signup = () => {
 			  
 			  <div className="btn_container">
 							<button className='btn'disabled={loading} >
-								{loading ? <span className="loading loading-spinner"></span> : "Signup"}
+								{loading ? <span className="loading loading-spinner"></span> : "Sign-up"}
 								</button>
 				</div>
 			</form>      

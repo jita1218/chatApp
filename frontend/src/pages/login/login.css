@@ -3,11 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 96rem;
     max-width: auto;
     height: 100vh;
     margin: 0 auto;
-    background-color: black;
+    background-color: var(--bg-color);
 }
 
 .login_container{
@@ -35,20 +34,20 @@
     color:black ;
 }
 
-
-
 .form{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 .signup:hover{
-    color: var(--text-color);
+    color: var(--blue-color);
 }
 .input{
     width: 20rem; 
     height: 3rem; 
     margin: 0 auto;
+    background-color: var(--blue-color);
+    color: var(--text-color);
 }
 
 .btn_container{
@@ -62,10 +61,53 @@
     justify-content: center;
     align-items: center;
     font-size: larger;
-    background-color: var(--text-color);
+    background-color: black;
     width: 20rem;
     padding: 1rem;
     color: white;
     margin: 1rem;
 }
 
+@media screen and (max-width: 600px){
+    .login{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+    }
+   
+    .login_container{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .label{
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+    .input{
+        width: 12rem; 
+        height: 3rem; 
+        margin: 0 auto;
+        background-color: var(--blue-color);
+        color: var(--text-color);
+    }
+    .btn_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+        background-color: black;
+        width: 12rem;
+        padding: 1rem;
+        color: white;
+        margin: 0 auto;
+    }
+}

@@ -19,14 +19,14 @@ import UseSendMessage from "../../hooks/UseSendMessage";
  				<input
  					type='text'
  					className='sending_message'
- 					placeholder='Send a message'
+ 					placeholder='   Send a message'
 					 value={message}
 					 onChange={(e) => setMessage(e.target.value)}
 				   
  				/>
  				
  			</div>
-             <button type='submit' className='send_btn'>
+             <button type='submit' className='send_btn' style={{backgroundColor:"var(--blue-color)"}}>
 			 {loading ? (
             <span className="loading loading-spinner"></span>
           ) : (

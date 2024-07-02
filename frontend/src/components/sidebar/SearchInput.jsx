@@ -33,7 +33,7 @@ const SearchInput = () => {
     <>
     <div className="search_input">
       <form onSubmit={handleSubmit} className='form_container' >
-      <input type='text' placeholder='Search…' className='input' style={{borderRadius: '2rem'}}
+      <input type='text' placeholder='Search…' className='input' style={{borderRadius: '2rem', marginLeft:"1rem"}}
       value={search}
       onChange={(e) => setSearch(e.target.value)}
       />

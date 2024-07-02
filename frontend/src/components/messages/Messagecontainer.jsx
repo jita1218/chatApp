@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useConversation from '../../zustand/useConversation.js';
 import MessageInput from './MessageInput.jsx';
 import Messagebar from './Messagebar.jsx';
@@ -8,26 +8,38 @@ import { useAuthContext } from '../../context/AuthContext.jsx';
 
 const MessageContainer = () => {
   const { selectedConversation, setSelectedConversation } = useConversation();
-	
+  const [isPhoneScreen, setIsPhoneScreen] = useState(window.innerWidth < 600);
+
   useEffect(() => {
-    return () => setSelectedConversation(null);
+    const handleResize = () => {
+      setIsPhoneScreen(window.innerWidth < 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      setSelectedConversation(null);
+    };
   }, [setSelectedConversation]);
 
-  
-
   return (
-    <div className='msg_container'>
-      {!selectedConversation ? (
-        <NoChatSelected />
-      ) : (
+    <div className='msg_container' style={{ display: selectedConversation || !isPhoneScreen ? 'block' : 'none' }}>
+      {selectedConversation ? (
         <>
           <div className='header'>
-            <span style={{ fontSize: '2.5rem' }}>To:</span>
-            <span style={{ fontSize: '2.5rem' }}>{selectedConversation.fullName}</span>
+            <button onClick={() => setSelectedConversation(null)} style={{ fontSize: '1rem', marginRight: '1rem' }}>Back</button>
+            <img
+            src={selectedConversation.profilePic}
+			alt='user avatar'
+    						/>
+            <span className='to'>{selectedConversation.fullName}</span>
           </div>
           <Messagebar />
           <MessageInput />
         </>
+      ) : (
+        !isPhoneScreen && <NoChatSelected />
       )}
     </div>
   );

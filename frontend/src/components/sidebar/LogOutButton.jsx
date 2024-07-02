@@ -9,12 +9,12 @@ const LogOutButton = () => {
   return (
     <div className='logout'>
       {!loading ?(
-        <button onClick={logout}>
-          <SlLogout />
+        <button   onClick={logout}   >
+          <SlLogout style={{color:"black"}}/>
         </button>
       ):(
         <button>
-          <span className='loading loading-spinner' style={{fontSize:"20px"}}></span>
+          <span className='loading loading-spinner' ></span>
         </button>
       )}
     </div>

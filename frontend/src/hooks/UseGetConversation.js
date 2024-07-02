@@ -10,8 +10,7 @@ const UseGetConversation = (token) => { // Pass token as a parameter
             setLoading(true);
             try {
                 const res = await fetch("/api/users", {
-                    method: "GET",
-                    mode: "cors",
+                
                     headers: {
                         'Authorization': `Bearer ${token}`, // Include the token in the headers
                         'Content-Type': 'application/json'
