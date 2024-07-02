@@ -9,7 +9,7 @@ const UseGetConversation = (token) => { // Pass token as a parameter
         const getConversations = async () => {
             setLoading(true);
             try {
-                const res = await fetch("http://localhost:8000/api/users", {
+                const res = await fetch("/api/users", {
                     headers: {
                         'Authorization': `Bearer ${token}`, // Include the token in the headers
                         'Content-Type': 'application/json'

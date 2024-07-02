@@ -17,7 +17,7 @@ const useGetCall = () => {
 
                 const userID = authUser._id;
                 console.log('Fetching token for userID:', userID);
-                const res = await fetch("http://localhost:8000/api/call/zegotoken", {
+                const res = await fetch("/api/call/zegotoken", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ userID }),

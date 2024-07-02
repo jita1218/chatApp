@@ -10,7 +10,7 @@ const UseGetMessages = (token) => {
         const getMessages = async () => {
             setLoading(true)
             try {
-                const res = await fetch(`http://localhost:8000/api/messages/${selectedConversation._id}`,{
+                const res = await fetch(`/api/messages/${selectedConversation._id}`,{
                     headers: {
                         'Authorization': `Bearer ${token}`, // Include the token in the headers
                         'Content-Type': 'application/json'

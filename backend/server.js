@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8000;
 const __dirname = path.resolve();
 
 // Use FRONTEND_URL for CORS
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
+const FRONTEND_URL = process.env.FRONTEND_URL ;
 
 const corsOptions = {
     origin: FRONTEND_URL,
