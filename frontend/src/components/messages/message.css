@@ -173,7 +173,7 @@ padding-right: 2px;
         display:flex;
         flex-direction: column;
         /* margin-top: 4rem; */
-        height: 75vh;
+        height: 78vh;
         background-color: var(--bg-color);
         width: 100%;
     }
