@@ -39,9 +39,7 @@
     flex-direction: column;
     margin: 0 auto;
 }
-.signup:hover{
-    color: var(--blue-color);
-}
+
 .input{
     width: 20rem; 
     height: 3rem; 
@@ -72,8 +70,8 @@
     .login{
         display: flex;
         flex-direction: column;
-        width: 100vw;
-        height: 100vh;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
     }
    

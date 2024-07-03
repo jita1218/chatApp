@@ -36,7 +36,7 @@ const Home = () => {
     <div className='home_container'>
       <div className="call_container "  style={{ display: <Sidebar /> && isPhoneScreen ? 'none' : 'block' }}>
         <a href={startCallURL()} target="_blank" rel="noopener noreferrer">
-          <MdVideoCall className="call_btn" style={{ fontSize: '2.5rem', color:"black" }} />
+          <MdVideoCall className="call_btn" style={{ fontSize: '2.5rem', color:"var(--blue-color)" }} />
         </a>
       </div>
       <div className="sidebar">

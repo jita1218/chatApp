@@ -48,7 +48,7 @@
 @media screen and (max-width: 600px){
     .convo_container{
         display: flex;
-        height: 82vh;
+        height: 78vh;
     }
     
 }

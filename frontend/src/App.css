@@ -6,12 +6,12 @@
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
-  --bg-color:#868F74;
-  --green-primary-color: #D4D7C4;
-  --blue-primary-color:#687A86;
+  --bg-color:#142c36;
+  --green-primary-color: #0d0d0ca3;
+  --blue-primary-color:#112a3b;
   --grey-color:#757068;
-  --blue-color:#8496A2;
-  --text-color: white;
+  --blue-color:#486275;
+  --text-color: black;
 }
 
 *{

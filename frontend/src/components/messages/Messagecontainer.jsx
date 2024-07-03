@@ -32,6 +32,7 @@ const MessageContainer = () => {
             <img
             src={selectedConversation.profilePic}
 			alt='user avatar'
+      style={{margin:"0.5rem"}}
     						/>
             <span className='to'>{selectedConversation.fullName}</span>
           </div>

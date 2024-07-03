@@ -10,7 +10,7 @@ const LogOutButton = () => {
     <div className='logout'>
       {!loading ?(
         <button   onClick={logout}   >
-          <SlLogout style={{color:"black"}}/>
+          <SlLogout style={{color:"white"}}/>
         </button>
       ):(
         <button>
