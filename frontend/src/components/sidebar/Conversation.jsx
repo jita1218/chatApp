@@ -24,7 +24,7 @@ const Conversation = ({ conversation,emoji }) => {
     
      				<div className='conversation_info '>
      					<div className='info'>
-						 <p>{conversation.fullName}</p>
+						 <p style={{color:"white"}}>{conversation.fullName}</p>
 						 <span>{emoji}</span>
     					</div>
     			</div>
