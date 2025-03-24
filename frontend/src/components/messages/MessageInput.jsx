@@ -22,7 +22,7 @@ import UseSendMessage from "../../hooks/UseSendMessage";
  					placeholder='   Send a message'
 					 value={message}
 					 onChange={(e) => setMessage(e.target.value)}
-				   
+				  
  				/>
  				
  			</div>

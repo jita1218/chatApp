@@ -6,6 +6,7 @@ import './message.css';
 import { TiMessages } from 'react-icons/ti';
 import { useAuthContext } from '../../context/AuthContext.jsx';
 
+
 const MessageContainer = () => {
   const { selectedConversation, setSelectedConversation } = useConversation();
   const [isPhoneScreen, setIsPhoneScreen] = useState(window.innerWidth < 600);
@@ -28,13 +29,14 @@ const MessageContainer = () => {
       {selectedConversation ? (
         <>
           <div className='header'>
-            <button onClick={() => setSelectedConversation(null)} style={{ fontSize: '1rem', marginRight: '1rem' }}>Back</button>
             <img
             src={selectedConversation.profilePic}
 			alt='user avatar'
       style={{margin:"0.5rem"}}
     						/>
             <span className='to'>{selectedConversation.fullName}</span>
+            <button onClick={() => setSelectedConversation(null)} style={{ fontSize: '1rem', margin: '0  0 0 auto', marginRight:'1rem',color:'var(--secondary-color) '}}>Back</button>
+
           </div>
           <Messagebar />
           <MessageInput />
@@ -52,9 +54,9 @@ const NoChatSelected = () => {
   const { authUser } = useAuthContext();
   return (
     <div className="nochat-container">
-      <div className="nochat">
-        <p style={{ fontSize: '20px' }}>Welcome👋 {authUser.fullName} ❄</p>
-        <p style={{ fontSize: '20px' }}>Select a chat to start messaging <TiMessages style={{ fontSize: '30px' }} /></p>
+      <div className="nochat" >
+        <p style={{ fontSize: '30px', fontFamily:'initial' ,color:'var(--secondary-color)'}}>Welcome👋 {authUser.fullName} ❄</p>
+        <p style={{ fontSize: '20px' ,fontFamily:'revert-layer',color:'var(--secondary-color)'}}>Select a chat to start messaging <TiMessages style={{ fontSize: '40px' }} /></p>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ const Call = () => {
     zegoUIKit.joinRoom(roomConfig);
   }, [zegoToken, roomId, authUser]);
 
-  return <div id="zego-container" style={{ width: '100%', height: '100vh', backgroundColor:"var(--bg-color)" }}></div>;
+  return <div id="zego-container" style={{ width: '100%', height: '100vh', backgroundColor:"var(--secondary-color)" }}></div>;
 };
 
 export default Call;

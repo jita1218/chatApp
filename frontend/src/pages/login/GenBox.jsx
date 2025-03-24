@@ -6,7 +6,7 @@ const GenBox = ({ onCheckboxChange, selectedGender }) => {
     <div className='genbox'>
       <div className='form-control'>
 	  <label className={`box ${selectedGender === "male" ? "selected" : ""}`}>
-					<span >Male</span>
+					<span style={{font:"menu", fontSize:'1rem'}} >Male</span>
 					<input
 						type='checkbox'
 						className='checkbox'
@@ -18,7 +18,7 @@ const GenBox = ({ onCheckboxChange, selectedGender }) => {
 
             <div className='form-control'>
 			<label className={`box ${selectedGender === "female" ? "selected" : ""}`}>
-					<span >Female</span>
+					<span style={{font:"menu", fontSize:'1rem'}} >Female</span>
 					<input
 						type='checkbox'
 						className='checkbox'

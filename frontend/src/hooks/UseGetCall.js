@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import toast from 'react-hot-toast';
-import { AuthContext } from '../context/AuthContext'; // Adjust the path as per your project structure
+import { AuthContext } from '../context/AuthContext'; 
 
 const useGetCall = () => {
     const [loading, setLoading] = useState(false);

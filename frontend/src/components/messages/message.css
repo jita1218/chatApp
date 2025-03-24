@@ -1,189 +1,198 @@
-.msg_container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-left: 1px solid var(--text-color);
-    right: 0;
+.msg_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-left: 1px solid var(--text-color);
+  right: 0;
 }
 
-.header{
-    display: flex;
-    margin: 0 auto;
-    gap: 1rem;
-    height: 9vh;
-    top: 0;
-    position: sticky;
-    width: 100%;
-    background-color: var(--green-primary-color);
-    border: 1px solid var(--text-color);
+.avatar_msg{
+  border-radius: 4rem;
+}
+.header {
+  display: flex;
+  margin: 0 auto;
+  gap: 1rem;
+  height: 9vh;
+  top: 0;
+  position: sticky;
+  width: 100%;
+  background-color: var(--green-primary-color);
+  border-bottom: 1px solid var(--text-color);
+}
+.av_profile {
+  border-radius: 4rem;
+ size: 2px;
+ margin: 0 auto;
 }
 
-.nochat-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify; 
-    width: 74vw;
-    background-color: var(--bg-color);
-    height: 100vh;
+
+.chat-image{
+    weight:20px;
+    height: 20px;
+}
+.nochat-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  width: 72vw;
+  background-color: var(--bg-color);
+  height: 100vh;
 }
 
-.nochat{
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font: large;
+.nochat {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font: large;
 }
 
-.msg_bar{
-    display:flex;
-    flex-direction: column;
-    position:relative;
-    overflow-y: scroll;
-    margin-top: 4rem;
-    height: 80vh;
-    width: 100%;
-    background-color: var(--bg-color);
-
-    margin:  0 auto ;
-padding-right: 1rem;
-padding-left: 1rem;
-  flex: 1 1 auto;      
-  overflow: auto; 
+.msg_bar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: scroll;
+  margin-top: 4rem;
+  height: 81vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  flex: 1 1 auto;
+  overflow: auto;
 }
 
-.msg_input{
-    display: flex;
-    margin: 0 auto;
-    padding:  1rem;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    background-color: var(--green-primary-color);
-    bottom: 0px;
-    align-items: center;
-    border: 1px solid var(--text-color);
+.msg_input {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: var(--green-primary-color);
+  bottom: 0px;
+  align-items: center;
+  border-top: 1px solid var(--text-color);
 }
 
-.sending_message{
-    display: flex;
-    border: 1px solid white;
-    width: 67vw;
-    left: 0;
-    border-radius: 1rem 0 0 1rem;
-    height: 3rem;
-    background-color: var(--blue-color);
-    overflow: auto;
-    margin: 0 auto;
-    color: white;
+.sending_message {
+  display: flex;
+  border: 1px solid white;
+  width: 67vw;
+  left: 0;
+  font-family: var(--body-font);
+  border-radius: 1rem 0 0 1rem;
+  height: 3rem;
+  background-color: var(--blue-color);
+  overflow: auto;
+  margin: 0 auto;
+  }
+
+.send_btn {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  height: 3rem;
+  background-color: var(--blue-color);
+  border-radius: 0 1rem 1rem 0;
+  padding-right: 2px;
 }
 
-.send_btn{
-display: flex;
-position: absolute;
-justify-content: center;
-align-items: center;
-/* border: 1px solid rgb(199, 46, 46); */
-right: 0;
-height: 3rem;
-background-color: var(--blue-color);
-border-radius: 0   1rem  1rem 0;
-padding-right: 2px;
+.msg {
+  display: flex;
+  width: 90vw;
+  color: var(--secondary-color);
 }
 
-.msg{
-    display: flex;
-    width: 90vw;
-
-}
-
-.to{
-    font-size: 2.5rem;
-    color: white;
+.to {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
 }
 
 .shake {
-	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
-	transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
-	perspective: 1000px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 @keyframes shake {
-	10%,
-	90% {
-		transform: translate3d(-1px, 0, 0);
-	}
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
 
-	20%,
-	80% {
-		transform: translate3d(2px, 0, 0);
-	}
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
 
-	30%,
-	50%,
-	70% {
-		transform: translate3d(-4px, 0, 0);
-	}
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
 
-	40%,
-	60% {
-		transform: translate3d(4px, 0, 0);
-	}
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
-@media screen and (max-width: 600px){
-    .header{
-        display: flex;
-        margin: 0 auto;
-        gap: 1rem;
-        height: 10vh;
-        top: 0;
-        position: sticky;
-        width: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    height: 10vh;
+    top: 0;
+    position: sticky;
+    width: 100%;
+  }
 
-    .to{
-        font-size: 2rem;
-    }
-    .msg{
-        display: flex;
-        width: 66vw;
-        left: 0;
-    }
+  .to {
+    font-size: 2rem;
+  }
+  .msg {
+    display: flex;
+    width: 80vw;
+    left: 0;
+  }
 
-    /* .sending_message{
-        display: flex;
-        width: 90vw;
-        left: 0;
-    } */
-    .msg_input{
-        display: flex;
-        margin: 0 auto;
-        height: 12vh;
-        width: 100%;
-    }
+  
+  .msg_input {
+    display: flex;
+    margin: 0 auto;
+    height: 12vh;
+    width: 100vw;
+  }
 
-    .chat-bubble{
-        display: flex;
-        flex-direction: column;
-        overflow-wrap: break-word;
-    }
-    .msg_bar{
-        display:flex;
-        flex-direction: column;
-        /* margin-top: 4rem; */
-        height: 78vh;
-        background-color: var(--bg-color);
-        width: 100%;
-    }
+  .chat-bubble {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+  }
+  .msg_bar {
+    display: flex;
+    height: 78vh;
+    background-color: var(--bg-color);
+    width: 100%;
+  }
+.sending_message{
+  width: 100%;
+}
+  
 
-    .send_btn{
-        display: flex;
-        position: absolute;
-        width: 3rem;
-        margin-right: 1rem;
-        height: 3rem;
-        margin: 0 auto;
-        }
+  .send_btn {
+    display: flex;
+    position: absolute;
+    width:4w;
+    margin-right: 2em;
+    height: 3rem;
+    margin: 0 auto;
+  }
 }
